@@ -1,3 +1,14 @@
+<script>
+  $(document).ready(function() {
+       $(".faded").hide();
+});
+
+$(document).ready(function() {
+      $(".faded").fadeIn(1500);
+});
+</script>
+
+
 <div class="sidenav">
   <a class="whitelink" href="#">Home</a>
   <a class="whitelink" ui-sref="ethernetswitches">Ethernet Switches</a>
@@ -12,7 +23,7 @@
   </div>
 </div>
 
-<div class="fuller sidemargin">
+<div class="fuller sidemargin faded">
 <div ng-controller="ProductsController as pCtrl">
    <div ng-repeat="product in pCtrl.products | orderBy:'name' | filter:{category: 'Ethernet Extenders'}">
     <div class="main col s12 m6 l3">
