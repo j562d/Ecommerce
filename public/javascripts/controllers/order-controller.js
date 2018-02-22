@@ -30,7 +30,7 @@ function OrdersController(productService, $stateParams, $state, $http, CartServi
   }
 
   vm.addOrder = function() {
-    OrderService.save({items:vm.cart, total:vm.getTotal(), street: vm.order.street, city: vm.order.city, zipcode: vm.order.zipcode}, function(order) {
+    OrderService.save({items:vm.cart, total:vm.getTotal(), street: vm.order.street, city: vm.order.city, zipcode: vm.order.zipcode, payment: vm.order.payment}, function(order) {
       CartService.emptyCart();
       $state.go('confirmation');
     });
