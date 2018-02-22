@@ -215,7 +215,7 @@ z-index: 3;
 
 .yellow {
   background:linear-gradient(rgba(20, 20, 20, 0), rgba(20, 20, 20, 0)),
-  url(https://i.imgur.com/n4hJdoc.jpg);
+  url(https://i.imgur.com/S6vre8i.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -574,8 +574,9 @@ z-index: 3;
   font-size: 15px;
 }
 
-.sidemargin2 {
-  padding-left: 500px;
+.sidemarginn {
+  margin-left: 200px;
+  width: auto;
 }
 
 .follow {

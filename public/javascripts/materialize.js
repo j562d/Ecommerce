@@ -41,6 +41,11 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
     });
 
 
+  $('.carousel').carousel();
+  setInterval(function() {
+    $('.carousel').carousel('next');
+  }, 3000); // every 2 seconds
+
 $('.carousel.carousel-slider').carousel({fullWidth: true});
 
 
