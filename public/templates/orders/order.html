@@ -1,20 +1,22 @@
+<div class="smalltext padding paddingright">
 <h2>Order Details</h2>
-<p><strong>Date Created:</strong> {{orderCtrl.order.createdAt | date: "mediumDate"}}</p>
-<p><strong>Total:</strong> ${{orderCtrl.order.total}}</p>
+<p class="smalltext">Date Created: {{orderCtrl.order.createdAt | date: "mediumDate"}}</p>
+<p class="smalltext">Total: ${{orderCtrl.order.total}}</p>
 <br>
-<strong>Shipping Address</strong>
-<p><strong>Street: </strong>{{orderCtrl.order.street}}</p>
-<p><strong>City:</strong> {{orderCtrl.order.city}}</p>
-<p><strong>Zipcode:</strong> {{orderCtrl.order.zipcode}}</p>
+<u>Shipping Address</u>
+<p class="smalltext">Street: {{orderCtrl.order.street}}</p>
+<p class="smalltext">City: {{orderCtrl.order.city}}</p>
+<p class="smalltext">Zipcode: {{orderCtrl.order.zipcode}}</p>
+<p class="smalltext">Credit Card: {{orderCtrl.order.payment}}</p>
 <br>
 <br>
 <br>
 <div ng-repeat="item in orderCtrl.order.items">
   <div class="order">
     <img ng-src='{{item.imageURL}}' height="60" width="60">
-    <p><strong>Product:</strong> {{item.name}}</p>
-    <p><strong>Price per Item:</strong> ${{item.price}}</p>
-    <p><strong>Quantity:</strong> {{item.qty}}</p>
+    <p class="smalltext">Product: {{item.name}}</p>
+    <p class="smalltext">Price per Item: ${{item.price}}</p>
+    <p class="smalltext">Quantity: {{item.qty}}</p>
   </div>
 </div>
 <br>
@@ -25,3 +27,5 @@ Street:<input type="text" ng-model="orderCtrl.order.street" id="street" class="i
 City<input type="text" ng-model="orderCtrl.order.city" id="city" class="input-size">
 Zipcode<input type="text" ng-model="orderCtrl.order.zipcode" id="zipcode" class="input-size">
 <button class="btn btn-xs btn-info" ng-click="orderCtrl.editOrder(order)">Save</button>
+
+</div>

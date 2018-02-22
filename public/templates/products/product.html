@@ -1,13 +1,36 @@
-<h2>{{pCtrl.product.name}}</h2>
-<img class="float" src='{{pCtrl.product.imageURL}}' height="300" width="300"><br>
-<h3>Product Sku: {{pCtrl.product.sku}}</h3><br>
-<h3>Price: ${{pCtrl.product.price}}</h3><br>
-<h3>{{pCtrl.product.description}}</h3><br>
-<button class="btn btn-success" ng-click="pCtrl.addItemToCart(pCtrl.product)">Add to Cart <i class="material-icons">shopping_cart</i></button>
+
+<script>
+  $(document).ready(function() {
+       $(".faded").hide();
+});
+
+$(document).ready(function() {
+      $(".faded").fadeIn(2000);
+});
+</script>
+
+
+<div class="sidenav">
+  <a class="whitelink" href="#">Home</a>
+  <a class="whitelink" ui-sref="ethernetswitches">Ethernet Switches</a>
+  <a class="whitelink" ui-sref="ethernetextenders"ui-sref="login">Ethernet Extenders</a>
+  <a class="whitelink" ui-sref="mediaconverters">Media Converters</a>
+  <a class="whitelink" ui-sref="powersupplies">Power Supplies</a>
+</div>
+
+
+<a href="#" class="linky"> < Go Back</a>
+<div class="faded sidemargin">
+<h2 class="padding">{{pCtrl.product.name}}</h2>
+<img class="float padding" src='{{pCtrl.product.imageURL}}' height="300" width="300"><br>
+<h4>Product Sku: {{pCtrl.product.sku}}</h4><br>
+<h4>${{pCtrl.product.price}}</h4><br>
+<h5 class="paddingright">{{pCtrl.product.description}}</h5><br>
+<button class="btn black" ng-click="pCtrl.addItemToCart(pCtrl.product)">Add to Cart <i class="material-icons">shopping_cart</i></button>
 
 <form class="clear review-form" ng-show="navCtrl.isLoggedIn()" ng-submit="pCtrl.createReview()">
-  <h3> Leave a Review! </h3>
-  <div class="form-group">
+  <h3 class="padding"> Leave a Review! </h3>
+  <div class="form-group padding">
     <input ng-model="pCtrl.text" autocomplete="off" type="textarea" class="form-control" placeholder="comment">
     <label class="label-size" for="rating">Rating: </label>
     <select name="rating" id="rating" ng-model="pCtrl.rating" class="form-control">
@@ -18,19 +41,19 @@
       <option value="5">5</option>
     </select>
   </div>
-  <button class="btn btn-default" type="submit">Add Review</button>
+  <button class="btn btn-default padding" type="submit">Add Review</button>
 </form><br>
 
-<h3 class="clear"> Product Reviews </h3>
-<h4 class="clear" ng-hide="pCtrl.product.reviews.length"> There are currently no reviews for this product. </h4>
+<h3 class="clear padding"> Product Reviews </h3>
+<h4 class="clear padding" ng-hide="pCtrl.product.reviews.length"> There are currently no reviews for this product. </h4>
   <div class="panel" ng-repeat="review in pCtrl.product.reviews | orderBy:'createdAt':true track by $index">
-    <div class="panel-header reviews">&nbsp;&nbsp;Reviewed on: {{review.createdAt | date: "mediumDate"}}&nbsp;&nbsp;<span ng-show="review.reviewer == navCtrl.getUser()._id" ng-click="pCtrl.deleteReview(review)" class="glyphicon glyphicon-trash" id="delete-comment"></span></div>
-    <div class="panel-body reviews">
-      <strong>Review:</strong> {{review.text}}<br>
-      <strong>Rating:</strong> {{review.rating}}/5
+    <div class="panel-header reviews smalltext">&nbsp;&nbsp;Reviewed on: {{review.createdAt | date: "mediumDate"}}&nbsp;&nbsp;<span ng-show="review.reviewer == navCtrl.getUser()._id" ng-click="pCtrl.deleteReview(review)" class="glyphicon glyphicon-trash smalltext" id="delete-comment"></span></div>
+    <div class="panel-body reviews smalltext">
+      Review: {{review.text}}<br>
+      Rating: {{review.rating}}/5
     </div>
   </div>
-
+</div>
 
 <!-- Code below is for editing and deleting products from database. Will implement in the future
 when I am able to create Admin role.

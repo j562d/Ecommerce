@@ -1,12 +1,36 @@
-<audio class="audio" id="audio" controls preload="auto">
+<!-- <audio class="audio" id="audio" controls preload="auto">
     <source src="http://www.allspark.net/sounds/apu_comeagain.wav" type="audio/mpeg" />
-</audio>
+</audio> -->
 
-<div class="row" ng-init="orderCtrl.audio()">
+<script>
+  setTimeout(function() {
+    $('.animate-bottom').fadeIn(600);
+    $('.animate-bottom').show();
+  }, 1800);
+
+
+  setTimeout(function() {
+    $('#loader').hide();
+  }, 1500);
+
+</script>
+
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Your order has successfully been placed!</h2>
+  <a href="#" class="linky"> Continue Shopping</a>
+</div>
+
+
+<!-- <div class="row" ng-init="orderCtrl.audio()">
     <div class="card">
       <div class="card-image">
         <img ui-sref="home" src="http://i.imgur.com/1QX0Iic.jpg?2" height="600" width="600">
       </div>
     </div>
 </div>
+ -->
+
 

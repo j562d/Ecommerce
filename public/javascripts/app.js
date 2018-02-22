@@ -29,6 +29,26 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
       templateUrl: 'templates/home.html'
     })
 
+    .state('ethernetswitches', {
+      url: '/ethernetswitches',
+      templateUrl: 'templates/category/ethernetswitches.html'
+    })
+
+    .state('ethernetextenders', {
+      url: '/ethernetextenders',
+      templateUrl: 'templates/category/ethernetextenders.html'
+    })
+
+    .state('mediaconverters', {
+      url: '/mediaconverters',
+      templateUrl: 'templates/category/mediaconverters.html'
+    })
+
+    .state('powersupplies', {
+      url: '/powersupplies',
+      templateUrl: 'templates/category/powersupplies.html'
+    })
+
     .state('login', {
       url: '/login',
       templateUrl: 'templates/users/login.html',
@@ -90,6 +110,7 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
 
   $urlRouterProvider.otherwise('/home');
 }
+
 
 
 

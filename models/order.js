@@ -11,6 +11,7 @@ var orderSchema = new Schema({
   street: String,
   city: String,
   zipcode: Number,
+  payment: Number,
   shipped: {type: Boolean,
             default: false}
 });

@@ -1,5 +1,17 @@
-<h3 ng-hide="pCtrl.cart.length">Your cart is empty!</h3>
-<table ng-show="pCtrl.cart.length" class="bordered">
+<script>
+  $(document).ready(function() {
+       $(".faded").hide();
+});
+
+$(document).ready(function() {
+      $(".faded").fadeIn(1000);
+});
+</script>
+
+
+<div class="faded cartmargin">
+<h3 class="padding" ng-hide="pCtrl.cart.length">Your cart is empty!</h3>
+<table ng-show="pCtrl.cart.length" class="bordered padding">
   <thead>
     <tr>
       <th data-field="image"> </th>
@@ -13,14 +25,15 @@
     <tr ng-repeat="p in pCtrl.cart">
       <td><img class="float" ng-src='{{p.imageURL}}' height="100" width="100"></td>
       <td><h4>{{p.name}}</h4></td>
-      <td>${{p.price}}</td>
-      <td><strong class="arrow" ng-click="pCtrl.decreaseItem(p)">-</strong>{{p.qty}}<strong class="arrow" ng-click="pCtrl.increaseItem(p)">+</strong></td>
-      <td><strong>SubTotal: ${{p.price * p.qty}}</strong></td>
-      <td><input class="btn btn-danger" type="button" ng-click="pCtrl.deleteItem(p)" value="REMOVE"></td>
+      <td class="smalltext">${{p.price}}</td>
+      <td class="smalltext"><strong class="arrow" ng-click="pCtrl.decreaseItem(p)">-</strong>{{p.qty}}<strong class="arrow" ng-click="pCtrl.increaseItem(p)">+</strong></td>
+      <td class="smalltext">SubTotal: ${{p.price * p.qty}}</td>
+<!--       <td><input class="btn btn-danger" type="button" ng-click="pCtrl.deleteItem(p)" value="REMOVE"></td>
+ -->    <td><a class="linky"  ng-click="pCtrl.deleteItem(p)"> Remove</td>
     </tr>
   </tbody>
 </table>
-<h3 ng-show="pCtrl.cart.length">Grand Total: ${{ pCtrl.getTotal() }} </h3>
-<button class="waves-effect waves-light btn green darken-2" ng-show="pCtrl.cart.length" ui-sref="checkout">Proceed to Checkout</button>
-<img ng-hide="pCtrl.cart.length" src="http://i.imgur.com/rkNPtfr.png" height="500" width="400">
-
+<h3 class="padding" ng-show="pCtrl.cart.length">Grand Total: ${{ pCtrl.getTotal() }} </h3>
+<button class="waves-effect waves-light btn black darken-2 padding" ng-show="pCtrl.cart.length" ui-sref="checkout">Proceed to Checkout</button>
+<!-- <img ng-hide="pCtrl.cart.length" src="http://i.imgur.com/rkNPtfr.png" height="500" width="400"> -->
+</div>

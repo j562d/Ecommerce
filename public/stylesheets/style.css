@@ -1,5 +1,5 @@
 * {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Assistant', sans-serif;
   font-size: 25px;
 }
 
@@ -13,7 +13,8 @@ body {
 }
 
 a {
-  color: #00B7FF;
+/*  color: #00B7FF;*/
+  color: black !important;
 }
 
 .apu {
@@ -28,7 +29,7 @@ a {
 
 .float {
   float: left;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin-right: 10px;
 }
 
@@ -48,7 +49,9 @@ a {
 .nav-extended {
   padding: 10px;
   border: 2px solid black;
-  background-color: rgba(0,0,0, .5);
+  background-color: white !important;
+  height: 70px !important;
+  color: black !important;
 }
 
 .checkout {
@@ -92,7 +95,7 @@ a {
 
 .card-content {
   height: 150px;
-  text-align: center;
+  text-align: left;
 }
 
 .card-image {
@@ -101,6 +104,8 @@ a {
 
 .filters {
   margin-bottom: 50px;
+  text-align: right;
+  margin-right: 20px;
 }
 
 .reviews {
@@ -118,13 +123,13 @@ a {
 }
 
 
-.banner{
+/*.banner{
   background-image: url("https://s-media-cache-ak0.pinimg.com/564x/1d/d5/8c/1dd58cbc9f1f1c4457aa7c0e4fb28e34.jpg")
-}
+}*/
 
-.container {
+/*.container {
   background-color: white;
-}
+}*/
 
 
 li.image {
@@ -165,3 +170,366 @@ height:400px;
   }
 }
 
+
+.jumbotron, .mainjumbo{
+    /*margin:15px 30px 0px 30px;*/
+    /*border-radius:10px;*/
+    background:linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)),
+    url(http://www.wallpapersshock.com/uploads/large/hd-computer/free-3d-technology-hd-wallpapers-download.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height:740px;
+    color: white !important;
+/*    position:fixed;
+    top:0;*/
+    position: relative;
+    z-index: 1 !important;
+    width: 100%;
+}
+
+/*.full {
+margin-top:500px;
+background-color: white;
+z-index: 3;
+}
+
+.fuller {
+  background-color: black !important;
+  z-index: 2;
+}*/
+
+.red, .amber, .green, .blue {
+  background:linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)),
+  url(https://images6.alphacoders.com/456/456498.jpg);
+/*  background-image: url("https://i.imgur.com/A7twmdJ.jpg");
+*/  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+.banner {
+  margin: 0px !important;
+  padding: -5px !important;
+  /*overflow: visible;*/
+}
+
+.carousel {
+  /*width: 100%;*/
+}
+
+.content {
+  font-size: 15px;
+}
+
+.addtocart {
+  font-size: 10px;
+}
+
+.main {
+  padding-left: 20px !important;
+}
+
+.filterlink {
+  font-size: 14px;
+  color: black;
+}
+
+.float {
+  float: left;
+}
+
+
+
+
+
+/*.animation-box {
+  width: 75%;
+  height: 27.5rem;
+  background-color: blue;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}*/
+
+.animation-container {
+  width: 1000rem;
+  height: 30rem;
+}
+
+@keyframes topFadeOut {
+  0% {
+    position: absolute;
+    top: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    top: 25%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bottomFadeOut {
+  0% {
+    position: absolute;
+    bottom: -5rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    bottom: 25%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes topFadeOutVertical {
+  0% {
+    position: absolute;
+    top: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    top: 45%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rightFadeInOut {
+  0% {
+    position: absolute;
+    right: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    right: 10rem;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    right: 10rem;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.first-text {
+  font-size: 4.4rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 5rem;
+  opacity: 0;
+  animation-name: topFadeOut;
+  animation-duration: 5s;
+  color: white;
+}
+
+.second-text {
+  font-size: 3.4rem;
+  position: absolute;
+  top: 8.5rem;
+  opacity: 0;
+  animation-name: rightFadeInOut;
+  animation-delay: 3s;
+  animation-duration: 6s;
+  color: #ccc;
+}
+
+.third-text {
+  transform: rotate(-90deg);
+  font-size: 2rem;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  opacity: 0;
+  animation-name: topFadeOutVertical;
+  animation-delay: 7.5s;
+  animation-duration: 6s;
+  color: #A3DDF0;
+  white-space: nowrap;
+}
+
+.fourth-text {
+  font-size: 3.4rem;
+  position: absolute;
+  top: 10.5rem;
+  left: 10%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeInOut;
+  animation-delay: 8.5s;
+  animation-duration: 9s;
+}
+
+.fifth-text {
+  font-size: 5rem;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  opacity: 0;
+  color: #F0EBA3;
+  animation-name: bottomFadeOut;
+  animation-delay: 10s;
+  animation-duration: 9s;
+}
+
+.jumbot {
+  padding-left: 40px;
+}
+
+.padding {
+  margin-left: 10px !important;
+}
+
+.paddingright {
+  padding-right: 15px;
+}
+
+.linky {
+  font-size: 14px;
+  padding-left: 20px;
+  color: black;
+}
+
+.smalltext {
+  font-size: 15px;
+}
+
+.alignright {
+  text-align: right;
+  padding-right: 15px;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+.cartmargin {
+  margin-top: 10px;
+}
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 120px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.whitelink {
+  color: white !important;
+  font-size: 18px !important;
+}
+
+.sidemargin {
+  margin-left: 220px;
+}

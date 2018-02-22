@@ -1,0 +1,32 @@
+<div class="sidenav">
+  <a class="whitelink" href="#">Home</a>
+  <a class="whitelink" ui-sref="ethernetswitches">Ethernet Switches</a>
+  <a class="whitelink" ui-sref="ethernetextenders"ui-sref="login">Ethernet Extenders</a>
+  <a class="whitelink" ui-sref="mediaconverters">Media Converters</a>
+  <a class="whitelink" ui-sref="powersupplies">Power Supplies</a>
+</div>
+
+
+
+<div class="fuller sidemargin">
+<div ng-controller="ProductsController as pCtrl">
+   <div ng-repeat="product in pCtrl.products | orderBy:'name' | filter:{category: 'Power Supplies'}">
+    <div class="main col s12 m6 l3">
+      <div>
+        <div class="card-image">
+          <img ui-sref="viewProduct({productId: product._id})" ng-src="{{product.imageURL}}" height="200">
+<!--           <a class="btn-floating halfway-fab waves-effect waves-light green" ng-click="pCtrl.addItemToCart(product)"><i>ADD</i></a>
+ -->        </div>
+        <div class="card-stacked">
+        <div class="card-content">
+          <p class="content">{{product.name}}
+          <br>${{product.price}}</p>
+          <!-- <a class="btn halfway-fab waves-effect waves-light black" ng-click="pCtrl.addItemToCart(product)"><i>ADD</i></a> -->
+          <a class="addtocart" ng-click="pCtrl.addItemToCart(product)">Add to cart</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
