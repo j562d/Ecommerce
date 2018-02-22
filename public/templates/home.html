@@ -1,15 +1,15 @@
-<script>
+<!-- <script>
   $(document).ready(function() {
        $(".scrollshow").hide();
 });
 
 $(window).scroll(function() {
-if ($(this).scrollTop()> 400) {
+if ($(this).scrollTop()> 10) {
 $('.scrollshow').show();
 }
 });
 
-</script>
+</script> -->
 
 <!-- <div class="advertise">
   <a href="/#!/products/58b600ffefe5a6277d2680ff" class="image2 box1"></a>
@@ -17,47 +17,53 @@ $('.scrollshow').show();
   <li class="image box3"></li>
 </div> -->
 
-<div class="sidenav scrollshow">
+<div class="sidenav">
   <a class="whitelink" href="#">Home</a>
   <a class="whitelink" ui-sref="ethernetswitches">Ethernet Switches</a>
-  <a class="whitelink" ui-sref="ethernetextenders"ui-sref="login">Ethernet Extenders</a>
+  <a class="whitelink" ui-sref="ethernetextenders">Ethernet Extenders</a>
   <a class="whitelink" ui-sref="mediaconverters">Media Converters</a>
   <a class="whitelink" ui-sref="powersupplies">Power Supplies</a>
-</div>
-
-
-
-<div class="jumbotron jumbotron-fluid mainjumbo">
-  <div class="container animation-box">
- <h1 class="jumbot first-text">EtherWAN</h1>
- <h1 class="jumbot second-text">EtherWAN</h1>
- <h1 class="jumbot third-text">EtherWAN</h1>
- <h1 class="jumbot fourth-text">EtherWAN</h1>
+  <div class="foot">
+  <a class="follow" href="https://www.facebook.com/EtherWAN" target="_blank"><img src="https://i.imgur.com/TP9ajvD.png" height="25" width="25"alt=""></a>
+  <a class="follow" href="https://www.linkedin.com/groups/4003843/profile" target="_blank"><img src="https://i.imgur.com/HC9q1tb.png" height="23" width="23" alt=""></a>
+  <a href="https://www.youtube.com/user/EtherWANSystems" target="_blank"><img src="https://i.imgur.com/Z3o4vWM.png" height="25" width="25" alt=""></a>
+  <p class="smalltext">Copyright © 2018 EtherWAN Systems, Inc. All rights reserved.</p>
   </div>
 </div>
 
 
-<!--   <div class="carousel carousel-slider center" data-indicators="true">
+
+<!-- <div class="jumbotron jumbotron-fluid mainjumbo">
+  <div class="container animation-box">
+ <h1 class="jumbot first-text">EtherWAN</h1>
+ <h1 class="jumbot second-text">“When Connectivity is Crucial"</h1>
+ <h1 class="jumbot third-text">EtherWAN</h1>
+ <h1 class="jumbot fourth-text">EtherWAN</h1>
+  </div>
+</div>
+ -->
+
+  <div class="carousel carousel-slider center sidemargin2" data-indicators="true">
     <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+<!--       <a class="btn waves-effect white grey-text darken-text-2">button</a>
+ -->    </div>
+    <div class="carousel-item blue white-text" href="#one!">
+<!--       <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p> -->
     </div>
-    <div class="carousel-item red white-text" href="#one!">
-      <h2>First Panel</h2>
-      <p class="white-text">This is your first panel</p>
+    <div class="carousel-item yellow white-text" href="#two!">
+<!--       <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p> -->
     </div>
-    <div class="carousel-item amber white-text" href="#two!">
-      <h2>Second Panel</h2>
-      <p class="white-text">This is your second panel</p>
+    <div class="carousel-item purple white-text" href="#three!">
+<!--       <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p> -->
     </div>
-    <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
+    <div class="carousel-item pink white-text" href="#four!">
+<!--       <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p> -->
     </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
-    </div>
-  </div> -->
+  </div>
 
 
 
@@ -95,11 +101,11 @@ $('.scrollshow').show();
  -->        </div>
         <div class="card-stacked">
         <div class="card-content">
-          <p class="content">{{product.name}}
+          <p class="content addfloat">{{product.name}}
           <br>${{product.price}}</p>
-          <!-- <a class="btn halfway-fab waves-effect waves-light black" ng-click="pCtrl.addItemToCart(product)"><i>ADD</i></a> -->
-          <a class="addtocart" ng-click="pCtrl.addItemToCart(product)">Add to cart</a>
-        </div>
+          <button class="btn black" ng-click="pCtrl.addItemToCart(product)">Add <i class="material-icons">shopping_cart</i></button>
+<!--           <a class="addtocart" ng-click="pCtrl.addItemToCart(product)">Add to cart</a>
+ -->        </div>
         </div>
       </div>
     </div>

@@ -13,9 +13,15 @@ $(document).ready(function() {
 <div class="sidenav">
   <a class="whitelink" href="#">Home</a>
   <a class="whitelink" ui-sref="ethernetswitches">Ethernet Switches</a>
-  <a class="whitelink" ui-sref="ethernetextenders"ui-sref="login">Ethernet Extenders</a>
+  <a class="whitelink" ui-sref="ethernetextenders">Ethernet Extenders</a>
   <a class="whitelink" ui-sref="mediaconverters">Media Converters</a>
   <a class="whitelink" ui-sref="powersupplies">Power Supplies</a>
+  <div class="foot">
+  <a class="follow" href="https://www.facebook.com/EtherWAN" target="_blank"><img src="https://i.imgur.com/TP9ajvD.png" height="25" width="25"alt=""></a>
+  <a class="follow" href="https://www.linkedin.com/groups/4003843/profile" target="_blank"><img src="https://i.imgur.com/HC9q1tb.png" height="23" width="23" alt=""></a>
+  <a href="https://www.youtube.com/user/EtherWANSystems" target="_blank"><img src="https://i.imgur.com/Z3o4vWM.png" height="25" width="25" alt=""></a>
+  <p class="smalltext">Copyright © 2018 EtherWAN Systems, Inc. All rights reserved.</p>
+  </div>
 </div>
 
 
@@ -31,15 +37,15 @@ $(document).ready(function() {
 <form class="clear review-form" ng-show="navCtrl.isLoggedIn()" ng-submit="pCtrl.createReview()">
   <h3 class="padding"> Leave a Review! </h3>
   <div class="form-group padding">
+  <select name="rating" id="rating" ng-model="pCtrl.rating" class="form-control">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
     <input ng-model="pCtrl.text" autocomplete="off" type="textarea" class="form-control" placeholder="comment">
     <label class="label-size" for="rating">Rating: </label>
-    <select name="rating" id="rating" ng-model="pCtrl.rating" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
   </div>
   <button class="btn btn-default padding" type="submit">Add Review</button>
 </form><br>
@@ -49,8 +55,8 @@ $(document).ready(function() {
   <div class="panel" ng-repeat="review in pCtrl.product.reviews | orderBy:'createdAt':true track by $index">
     <div class="panel-header reviews smalltext">&nbsp;&nbsp;Reviewed on: {{review.createdAt | date: "mediumDate"}}&nbsp;&nbsp;<span ng-show="review.reviewer == navCtrl.getUser()._id" ng-click="pCtrl.deleteReview(review)" class="glyphicon glyphicon-trash smalltext" id="delete-comment"></span></div>
     <div class="panel-body reviews smalltext">
+      Rating: {{review.rating}}/5 <br>
       Review: {{review.text}}<br>
-      Rating: {{review.rating}}/5
     </div>
   </div>
 </div>

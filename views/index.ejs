@@ -25,12 +25,13 @@
     <ul id="logged-in-dropdown" class="dropdown-content">
       <li><a ui-sref="user" class="center-align">Orders</a></li>
       <li class="divider"></li>
+      <li><a href="https://www.etherwan.com/us/about-etherwan/customer-support-service" target="_blank" class="center-align">Support</a></li>
       <li><a ng-click="navCtrl.logout()" class="center-align">Log Out</a></li>
     </ul>
     <div class="navbar-fixed">
     <nav class="nav-extended  black darken-1">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><img src="http://www.foxassoc.com/wp-content/uploads/2017/03/etherwan_logo_700x220.png" height="50" width="200"></a>
+        <a href="#" class="brand-logo"><img src="https://pgsadotca.files.wordpress.com/2016/02/logo.jpg" height="60" width="70"></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="side-nav" id="mobile-demo">
           <li ng-hide="navCtrl.isLoggedIn()"><a class="dropdown-button" ui-sref="login" data-activates="logged-out-dropdown"><h3>Sign In</h3></a></li>
@@ -52,6 +53,9 @@
     <div class="row banner" ui-view class="container">
      <!--  <div ui-view class="container"></div> -->
     </div>
+
+
+
 
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/materialize.js"></script>
