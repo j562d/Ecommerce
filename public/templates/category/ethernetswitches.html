@@ -36,9 +36,10 @@ $(document).ready(function() {
  -->        </div>
         <div class="card-stacked">
         <div class="card-content">
-          <p class="content">{{product.name}}
+          <p class="content addfloat">{{product.name}}
           <br>${{product.price}}</p>
-          <button class="btn halfway-fab waves-effect waves-light black" ng-click="pCtrl.addItemToCart(product)"><i>ADD</i></button>
+          <button class="btn black" ng-click="pCtrl.addItemToCart(product)">Add <i class="material-icons">shopping_cart</i></button>
+          <!-- <button class="btn halfway-fab waves-effect waves-light black" ng-click="pCtrl.addItemToCart(product)"><i>ADD</i></button> -->
 <!--           <a class="addtocart" ng-click="pCtrl.addItemToCart(product)">Add to cart</a>
  -->        </div>
         </div>
