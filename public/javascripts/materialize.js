@@ -1,4 +1,5 @@
   $(document).ready(function() {
+    $(".button-collapse").sideNav();
        $(".jumbotron").hide();
 });
 
@@ -31,22 +32,20 @@ $(document).ready(function() {
     //   $('.slider').slider();
     // });
 
-    $(".button-collapse").sideNav();
 
 
 $('.carousel.carousel-slider').carousel({fullWidth: true});
 
-    $(document).ready(function(){
-      $('.carousel').carousel();
-    });
+    // $(document).ready(function(){
+    //   $('.carousel').carousel();
+    // });
 
 
-  $('.carousel').carousel();
-  setInterval(function() {
-    $('.carousel').carousel('next');
-  }, 5000); // every 2 seconds
+setInterval(function(){
+  $('.carousel').carousel('next');
+}, 5000);
 
-$('.carousel.carousel-slider').carousel({fullWidth: true});
+// $('.carousel.carousel-slider').carousel({fullWidth: true});
 
 
 var myVar;
